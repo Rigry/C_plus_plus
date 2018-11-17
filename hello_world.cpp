@@ -2,7 +2,7 @@
 
 int main()
 {
-   std::cout << "Привет, Мир!" << std::endl;
+   std::cout << "Привет, Мир! и все" << std::endl;
 
    return 0;
 }
