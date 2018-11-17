@@ -99,6 +99,7 @@ void triangle_2()
 			for (int j = 0; j < (current_string - 1); j++) {
       	   printf(" ^");
       	}
+			printf("\n");
 		} else printf("\n");
       current_string++;
    }
