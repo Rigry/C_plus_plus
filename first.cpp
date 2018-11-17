@@ -1,1 +1,9 @@
-firts
+#include <iostream>
+
+int main ()
+{
+   int x, y;
+   std::cin >> x >> y;
+   int z = x+y;
+   std::cout << z << std::endl;
+}
