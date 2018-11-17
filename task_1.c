@@ -11,7 +11,7 @@ void task_1()
 }
 
 // №2 if/else
-void task_2()
+void number_in_range()
 {
    printf("Введите любое целое число\n");
    int numder;
@@ -21,8 +21,9 @@ void task_2()
    else 
       printf("Ваше число %d не попадает в диапазон от 0 до 100\n", numder);
 }
+
 // using ternary operator
-void task_2_1()
+void number_in_range_2()
 {
    printf("Введите любое целое число\n");
    int numder = 0;
@@ -33,7 +34,7 @@ void task_2_1()
 }
 
 // №3 cycle_1
-void task_3()
+void average()
 {
    printf("Введите любые 10 чисел\n");
    float numder = 0;
@@ -50,7 +51,7 @@ void task_3()
 }
 
 // №4 cycle_2
-void task_4()
+void triangle()
 {
    printf("Из скольки строк Вы хотите постороить треугольник?\n");
    int qty_strings = 0;
@@ -72,8 +73,9 @@ void task_4()
    }
 
 }
+
 // if you need triangle contour
-void task_4_1()
+void triangle_2()
 {
    printf("Из скольки строк Вы хотите постороить треугольник?\n");
    int qty_strings = 0;
@@ -106,9 +108,9 @@ void task_4_1()
 // to launch a task uncomment it
 int main()
 {
-   task_2();
-   // task_2_1();
-   // task_3();
-	// task_4();
-	// task_4_1();
+   number_in_range();
+   number_in_range_2();
+   average();
+	triangle();
+	triangle_2();
 }
