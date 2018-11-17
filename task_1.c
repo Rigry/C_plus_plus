@@ -109,8 +109,8 @@ void triangle_2()
 int main()
 {
    number_in_range();
-   number_in_range_2();
-   average();
-	triangle();
-	triangle_2();
+   // number_in_range_2();
+   // average();
+	// triangle();
+	// triangle_2();
 }
