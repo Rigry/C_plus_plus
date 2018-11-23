@@ -54,17 +54,11 @@ int massif (int* array, int array_size)
 	} else return 0;
 }
 
-void conversion_massif(int* array, int array_size)
+void conversion_massif(int* array, int size)
 {
-	if (sizeof(int) == 4 && sizeof(short) == 2) {
-		short arr[array_size*2];
-		int end = 0;
-		for (int i = 0; i < array_size; i++) {
-			arr[end++] = (short)(array[i] >> 16);
-			arr[end++] = (short)(array[i] & 0xffff);
-		}
-
-		for (int i = 0; i < 2*array_size; i++)
-			printf("%hd ", arr[i]);
-	} else printf("no");
+	short* arr = (short*)array;
+	size *= sizeof(int)/sizeof(short);
+	while (size--)
+		printf("%hd ", *arr++);
+	printf("\n");
 }
