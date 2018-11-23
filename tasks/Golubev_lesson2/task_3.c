@@ -13,5 +13,9 @@ int main ()
    int array_1[] = {-7, 856};
    conversion_massif(array_1, 2);
    // -7 -1 856 0
+
+   int array_2[] = {157342, 123, 34, 8};
+   conversion_massif(array_2, 2);
+   // 26270 2 123 0
    return 0;
 }
