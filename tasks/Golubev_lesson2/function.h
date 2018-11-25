@@ -42,7 +42,7 @@ int massif (int* array, int array_size)
    for (int i = 0; i < array_size; i++) {
 		if (array[i] % 2 != 0) {
 			array[i] *=2;
-         odd++;
+         if (odd == 0) odd = 1;
       }
    }
    if (odd) {
