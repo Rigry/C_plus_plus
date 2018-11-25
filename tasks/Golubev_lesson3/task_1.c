@@ -9,23 +9,4 @@ int main()
    dec_to_bin(a, bin);
    puts(bin);
 
-   // puts(dec_to_bin(7));
-
-   // memset(bin, 0, sizeof(int) * 8 +1);
-
-   // dec_to_bin(7, bin);
-   // puts(bin);
-
-   // strcpy(bin, "");
-
-   // dec_to_bin(15426, bin);
-   // puts(bin);
-
-   // strcpy(bin, "");
-
-   // dec_to_bin(15426, bin);
-   // puts(bin);
-
-   // memset(bin, 0, sizeof(int) * 8 +1);
-
 }
