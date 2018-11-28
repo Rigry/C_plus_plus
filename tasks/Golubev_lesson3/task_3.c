@@ -12,11 +12,12 @@ int* wrap (int);
 
 int main()
 {
-   printf("Enter the size of allocated memory: ");
+   printf("Enter the size of massiv: ");
    int size = 0;
    scanf("%d", &size);
    int* p = wrap(size);
-   for (int i = 0; i <= size; i++) {
+
+   for (int i = 0; i <= size - 1; i++) {
       p[i] = i*i;
       printf ("%d ", p[i]);
    }
@@ -26,18 +27,16 @@ int main()
    return 0;
 }
 
-// Хоть calloc allocates memory for an array of num objects of size size 
+// calloc allocates memory for an array of num objects of size size 
 // and initializes all bytes in the allocated storage to ZERO,
-// я сделаю это еще раз, как сказано в задании, гарантированно,
-// потом не докажешь, что гарантированно обнулил,
-// не снижайте оценку из-за этого.
-
 int* wrap (int size)
 {
-   int* p = calloc(size, sizeof(int));
-   if (p) {
-      memset(p, 0, size*sizeof(int));
+   int* p = (int*) calloc(size, sizeof(int));
+   if (p)
       return p;
+   else {
+      fprintf (stderr, "fatal: failed to allocate memory (calloc of %ld bytes).\n", size * sizeof(int));
+      exit(-1);
    }
 }
 

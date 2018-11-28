@@ -34,6 +34,8 @@ int main ()
 
 void counter (Rectangle* rectangle)
 {
-   rectangle -> perimeter = 2*(rectangle -> length + rectangle -> width);
-   rectangle -> area      = rectangle -> length * rectangle -> width;
+   if (rectangle) {
+      rectangle -> perimeter = 2*(rectangle -> length + rectangle -> width);
+      rectangle -> area      = rectangle -> length * rectangle -> width;
+   }
 }
