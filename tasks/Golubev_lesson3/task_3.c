@@ -17,7 +17,7 @@ int main()
    scanf("%d", &size);
    int* p = wrap(size);
 
-   for (int i = 0; i <= size - 1; i++) {
+   for (int i = 0; i < size; i++) {
       p[i] = i*i;
       printf ("%d ", p[i]);
    }

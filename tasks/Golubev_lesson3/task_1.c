@@ -27,7 +27,7 @@ char* dec_to_bin(int dec)
       fprintf (stderr, "fatal: failed to allocate memory (malloc of %ld bytes).\n", sizeof(int) * 8);
       exit(-1);
    }
-   // есть редкая на применение функция xmalloc,
+   // есть редкая на применение функция xmalloc, в стандартной библиотеке не описана
    // которая вроде как сама проверяет на NULL и вызывает exit,
    // но не пробовал ничего с ней творить
 
