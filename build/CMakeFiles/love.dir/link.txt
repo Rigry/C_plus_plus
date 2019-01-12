@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/love.dir/love.cpp.o  -o love 
