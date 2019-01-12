@@ -1,4 +1,0 @@
-/home/alexandr/code/C_plus_plus/build/CMakeFiles/rebuild_cache.dir
-/home/alexandr/code/C_plus_plus/build/CMakeFiles/edit_cache.dir
-/home/alexandr/code/C_plus_plus/build/CMakeFiles/love.dir
-/home/alexandr/code/C_plus_plus/build/CMakeFiles/love1.dir
