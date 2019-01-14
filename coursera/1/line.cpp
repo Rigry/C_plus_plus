@@ -184,7 +184,7 @@ int main() {
         n /= 2;
     }
 
-    for (auto i = bits.size() - 1; i >= 0; --i) {
+    for (int i = bits.size() - 1; i >= 0; --i) {
         cout << bits[i];
     }
     return 0;
