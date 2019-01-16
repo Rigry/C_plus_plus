@@ -2,10 +2,158 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <cctype>
+#include <map>
+
+struct Name_person {
+   std::string first_name, last_name;
+};
+
+class Person {
+public:
+  void ChangeFirstName(int year, const std::string& first_name) {
+    // добавить факт изменения имени на first_name в год year
+
+   if (name.count(year)) 
+      name[year] = {first_name, name[year].last_name};
+   else
+      name[year] = {first_name, ""};
+   
+    
+  }
+  void ChangeLastName(int year, const std::string& last_name) {
+    
+   if (name.count(year)) 
+      name[year] = {name[year].first_name, last_name};
+   else
+      name[year] = {"", last_name};
+   
+    // добавить факт изменения фамилии на last_name в год year
+  }
+  std::string GetFullName(int year) {
+
+     Name_person name_person;
+   
+   for (const auto& item : name) {
+      if (item.first <= year) {
+         name_person = item.second;
+      } else break;
+   }
+
+   return name_person.first_name.empty() and name_person.last_name.empty() ? "Incognito" :
+          name_person.first_name.size()  and name_person.last_name.empty() ? name_person.first_name + " with unknown last name" :
+          name_person.first_name.empty() and name_person.last_name.size()  ? name_person.last_name  + " with unknown first name" :
+          name_person.first_name     + " " + name_person.last_name;
+
+  }
+private:
+
+   std::map <int, Name_person> name;
+   
+   
+};
+
+int main() {
+  Person person;
+  
+  person.ChangeFirstName(1965, "Polina");
+  person.ChangeLastName(1967, "Sergeeva");
+  for (int year : {1900, 1965, 1990}) {
+    std::cout << person.GetFullName(year) << std::endl;
+  }
+  
+  person.ChangeFirstName(1970, "Appolinaria");
+  for (int year : {1969, 1970}) {
+    std::cout << person.GetFullName(year) << std::endl;
+  }
+  
+  person.ChangeLastName(1968, "Volkova");
+  for (int year : {1969, 1970}) {
+    std::cout << person.GetFullName(year) << std::endl;
+  }
+  
+  return 0;
+}
+
+// class SortedStrings 
+// {
+//    std::vector<std::string> sort_string;
+// public:
+
+//    void AddString(const std::string& s) {
+//       sort_string.push_back(s);
+//       std::sort(sort_string.begin(), sort_string.end());
+//    }
+//    std::vector<std::string> GetSortedStrings() {
+//       return sort_string;
+//    }
+// };
+
+// void PrintSortedStrings(SortedStrings& strings) {
+//   for (const std::string& s : strings.GetSortedStrings()) {
+//     std::cout << s << " ";
+//   }
+//   std::cout << std::endl;
+// }
+
+// int main() {
+//   SortedStrings strings;
+  
+//   strings.AddString("first");
+//   strings.AddString("third");
+//   strings.AddString("second");
+//   PrintSortedStrings(strings);
+  
+//   strings.AddString("second");
+//   PrintSortedStrings(strings);
+  
+//   return 0;
+// }
+
+//  bool is_low (std::string a, std::string b) 
+//     {
+//         int k = 0;
+//         while (a[k])
+//         {
+//           a[k] = tolower(a[k]);
+//           k++;
+//         }
+//         k = 0;
+//         while (b[k])
+//         {
+//           b[k] = tolower(b[k]);
+//           k++;
+//         }
+//         return a < b;
+//     }
 
 // int main()
 // {
+//     int n;
+//     std::cin >> n;
+//     std::vector<std::string> nums (n);
+//     for (auto& i : nums) {
+//         std::cin >> i;
+//     }
 
+//     // std::string to_low_ (std::string i) {
+//         // int k = 0;
+//         // while (i[k])
+//         // {
+//         //   i[k] = tolower(i[k]);
+//         //   k++;
+//         // }
+//     //     return i;
+//     // }
+
+   
+
+//     std::sort(nums.begin(), nums.end(), is_low);
+
+//     for (auto& i : nums)
+//         std::cout << i << " ";
+
+//     std::cout << std::endl;
 // }
 
 // int main()
@@ -172,23 +320,23 @@
 //    std::cout << Factorial(n) << std::endl;
 // }
 
-using namespace std;
+// using namespace std;
 
-int main() {
-    int n;
-    vector<int> bits;
+// int main() {
+//     int n;
+//     vector<int> bits;
 
-    cin >> n;
-    while (n > 0) {
-        bits.push_back(n % 2);
-        n /= 2;
-    }
+//     cin >> n;
+//     while (n > 0) {
+//         bits.push_back(n % 2);
+//         n /= 2;
+//     }
 
-    for (int i = bits.size() - 1; i >= 0; --i) {
-        cout << bits[i];
-    }
-    return 0;
-}
+//     for (int i = bits.size() - 1; i >= 0; --i) {
+//         cout << bits[i];
+//     }
+//     return 0;
+// }
 
 // int main()
 // {
