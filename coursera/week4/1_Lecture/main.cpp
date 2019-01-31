@@ -1,3 +1,48 @@
+#include <iostream>
+#include<string>
+
+struct Specialization
+{
+   std::string string;
+   explicit Specialization(const std::string& s) : string{s} {}
+};
+
+struct Course
+{
+   std::string string;
+   explicit Course(const std::string& s) : string{s} {}
+};
+
+struct Week
+{
+   std::string string;
+   explicit Week(const std::string& s) : string{s} {}
+};
+
+struct LectureTitle {
+   std::string specialization;
+   std::string course;
+   std::string week;
+   LectureTitle(const Specialization& s
+              , const Course& c
+              , const Week& w)
+              : specialization{s.string}
+              , course        {c.string}
+              , week          {w.string}
+   {}
+};
+
+int main()
+{
+   LectureTitle title (
+      Specialization("C++"),
+      Course("White belt"),
+      Week("4th")
+   );
+   // std::cout << title.course;
+}
+
+
 // Дана структура LectureTitle:
 
 // struct LectureTitle {
