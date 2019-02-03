@@ -1,3 +1,46 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+ 
+// int main () {
+//   string line;
+//   ifstream input ("input.txt");
+//   if (input.is_open())
+//   {
+//     while (! input.eof() )
+//     {
+//       getline (input,line);
+//       cout << line << endl;
+//     }
+//     input.close();
+//   }
+ 
+//   else cout << "Unable to open file"; 
+ 
+//   return 0;
+// }
+
+int main () {
+  string line;
+  ifstream input ("input.txt");
+  ofstream output ("output.txt");
+  if (input.is_open())
+  {
+    while (! input.eof() )
+    {
+      getline (input,line);
+      output << line << endl;
+    }
+    input.close();
+  }
+ 
+  else cout << "Unable to open file"; 
+ 
+  return 0;
+}
+
+
 // В этом задании вам предстоит написать две небольшие программы. 
 // Каждый пункт - отдельная задача, решение отправляйте в поле с соответствующим номером.
 // Часть 1
