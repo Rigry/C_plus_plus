@@ -24,23 +24,23 @@
 // 3.333
 // 3.300
 
-// #include <iostream>
-// #include <fstream>
-// #include <string>
-// #include <iomanip>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
 
-// using namespace std;
+using namespace std;
 
-// int main() {
-//     ifstream input("input.txt");
+int main() {
+    ifstream input("input.txt");
 
-//     double a;
+    double a;
 
-//     cout << fixed << setprecision(3);
+    cout << fixed << setprecision(3);
 
-//     while (input >> a) {
-//         cout << a << endl;
-//     }
+    while (input >> a) {
+        cout << a << endl;
+    }
 
-//     return 0;
-// }
+    return 0;
+}
